@@ -175,6 +175,10 @@
 {"name":"Updated User","amount":6000,"type":"Personal","income":50000,"interestRate":15,"monthlyPayment":207.99197102516533,"_id":"zR0SDO8GRrEsPXhM"}
 {"name":"Test User 1","amount":5000,"type":"Personal","income":10000,"interestRate":15,"monthlyPayment":173.3266425209711,"_id":"zgsrGumKGriJGDEt"}
 {"name":"Updated User","amount":6000,"type":"Personal","income":50000,"interestRate":15,"monthlyPayment":207.99197102516533,"_id":"zuih1Lrju1yozU5T"}
-{"name":"sumit banskota","amount":1000000,"type":"Home","income":10000,"interestRate":5,"monthlyPayment":5368.216230121398,"_id":"11qQharEMr3T9Jv9"}
-{"name":"sumit","amount":1000000,"type":"Home","income":2323,"interestRate":6,"monthlyPayment":5995.505251527569,"_id":"11qQharEMr3T9Jv9"}
-{"$$deleted":true,"_id":"11qQharEMr3T9Jv9"}
+{"name":"Test User","amount":5000,"type":"Personal","income":50000,"interestRate":15,"monthlyPayment":173.3266425209711,"_id":"tEY8HVJQLUHD7oCT"}
+{"name":"Test User","amount":5000,"type":"Personal","income":50000,"interestRate":15,"monthlyPayment":173.3266425209711,"_id":"alw2FkK2a7ABJstU"}
+{"name":"Updated User","amount":6000,"type":"Personal","income":50000,"interestRate":15,"monthlyPayment":207.99197102516533,"_id":"alw2FkK2a7ABJstU"}
+{"name":"Test User","amount":5000,"type":"Personal","income":50000,"interestRate":15,"monthlyPayment":173.3266425209711,"_id":"GqaVGjp1kQTKldVL"}
+{"$$deleted":true,"_id":"GqaVGjp1kQTKldVL"}
+{"name":"Test User 1","amount":5000,"type":"Personal","income":10000,"interestRate":15,"monthlyPayment":173.3266425209711,"_id":"eLkzdLISEbeJKbB5"}
+{"name":"Test User 2","amount":7000,"type":"Personal","income":20000,"interestRate":17,"monthlyPayment":249.5690926872128,"_id":"u8tYKmlmskBPUQ8s"}
