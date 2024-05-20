@@ -1,0 +1,20 @@
+{
+    "personalLoan": {
+        "minAmount": 1000,
+        "maxAmount": 20000,
+        "minInterestRate": 15,
+        "maxInterestRate": 20
+    },
+    "carLoan": {
+        "minAmount": 4000,
+        "maxAmount": 100000,
+        "minInterestRate": 12,
+        "maxInterestRate": 16
+    },
+    "homeLoan": {
+        "minAmount": 100000,
+        "maxAmount": 10000000,
+        "minInterestRate": 5,
+        "maxInterestRate": 7
+    }
+}
