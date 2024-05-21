@@ -64,6 +64,14 @@ describe('LoanController', () => {
         expect(createResponse.body.errors).toBeDefined();
     });
 
+    test('should return validation error for invalid loan ID', async () => {
+        const response = await request(app).get('/loans/"invalid_id"');
+        expect(response.status).toBe(400);
+        expect(response.body.success).toBe(false);
+        expect(response.body.code).toBe('VALIDATION_ERROR');
+        expect(response.body.errors).toBeDefined();
+    });
+
     test('should update a loan', async () => {
         const loan: Loan = {
             name: 'Test User',
@@ -105,6 +113,22 @@ describe('LoanController', () => {
         expect(updateResponse.body.message).toBe('Loan could not be updated. Either the loan was not found or something went wrong.');
     });
 
+    test('should return validation error for invalid loan ID during update', async () => {
+        const loan: Loan = {
+            name: 'Test User',
+            amount: 5000,
+            type: LoanType.Personal,
+            income: 50000,
+            interestRate: 15,
+        };
+
+        const updateResponse = await request(app).put('/loans/"invalid_id$"').send(loan);
+        expect(updateResponse.status).toBe(400);
+        expect(updateResponse.body.success).toBe(false);
+        expect(updateResponse.body.code).toBe('VALIDATION_ERROR');
+        expect(updateResponse.body.errors).toBeDefined();
+    });
+
     test('should delete a loan', async () => {
         const loan: Loan = {
             name: 'Test User',
@@ -132,6 +156,14 @@ describe('LoanController', () => {
         expect(deleteResponse.status).toBe(404);
         expect(deleteResponse.body.success).toBe(false);
         expect(deleteResponse.body.message).toBe('Loan could not be deleted. Either the loan was not found or something went wrong.');
+    });
+
+    test('should return validation error for invalid loan ID during delete', async () => {
+        const deleteResponse = await request(app).delete('/loans/"invalid_id$"');
+        expect(deleteResponse.status).toBe(400);
+        expect(deleteResponse.body.success).toBe(false);
+        expect(deleteResponse.body.code).toBe('VALIDATION_ERROR');
+        expect(deleteResponse.body.errors).toBeDefined();
     });
 
     test('should retrieve all loans', async () => {
