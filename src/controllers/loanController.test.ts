@@ -4,16 +4,12 @@ import {app} from '../app';
 import {LoanType} from '../entities/loanType';
 import {Loan} from '../entities/loan';
 import Datastore from 'nedb';
-import {container} from 'tsyringe';
-import {LoanRepository} from '../repositories/loanRepository';
 
 describe('LoanController', () => {
     let testDb: Datastore;
 
     beforeAll(() => {
         testDb = new Datastore();
-        const loanRepository = new LoanRepository(testDb);
-        container.registerInstance('LoanRepository', loanRepository);
     });
 
     beforeEach((done) => {
